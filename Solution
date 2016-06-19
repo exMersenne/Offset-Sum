@@ -1,14 +1,22 @@
+#Sample Inputs
 input1 = "06ababab"
 input2 = "12hello there world"
+input3 = "70hello there world"
+
+#Here the comments represent alternative ways to solve the same problem
+
+#'isthere(c, arr)' is a bool function that tracks whether a character was already counted before or not
+#'c' is the character that we are searching for in an list 'arr' which records all the characters that are already counted
+#'isthere(c, arr)' returns 1 if the the character is found and returns 0 if the character is not found 
 
 def isthere (c, arr):
-    j = 0
-    #for j in range(0,(len(arr) -1)):
-    for char in arr:
-        if char == c:
-        #if arr[j] == c:
-            return 0
-    return 1
+        #j = 0
+        #for j in range(0,(len(arr) -1)):
+    for char in arr: #Taking each character 'char' of list 'arr' at a time
+        if char == c: #Comparing if it is already already recorded
+            #if arr[j] == c:
+            return 1 #The character has been found
+    return 0 #The character has not been found
 
 def Calculate(inp):
 
@@ -26,7 +34,7 @@ def Calculate(inp):
     #for i in range(0,(len (cut)- 1)):
     for c in cut:
         #c = cut[i]
-        if ( c != " " and isthere (c, charcount) == 1 ):
+        if ( c != " " and isthere (c, charcount) == 0 ):
         #if ( c != " " ):
             index = 0
             tsum = 0
@@ -54,6 +62,6 @@ def Calculate(inp):
    
 ##def main():
 
-#print input1
 Calculate(input1)
 Calculate(input2)
+Calculate(input3)
