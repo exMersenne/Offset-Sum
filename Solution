@@ -1,0 +1,59 @@
+input1 = "06ababab"
+input2 = "12hello there world"
+
+def isthere (c, arr):
+    j = 0
+    #for j in range(0,(len(arr) -1)):
+    for char in arr:
+        if char == c:
+        #if arr[j] == c:
+            return 0
+    return 1
+
+def Calculate(inp):
+
+    ##Calculating the Offsets
+    i = 0
+    j = 0
+    charcount = []
+    csum = {}
+    first = int(inp[0:2])
+    #print first
+    second = inp[2:]
+    cut = second [:first]
+    #cut = inp[2:(first+1)]
+    #print cut 
+    #for i in range(0,(len (cut)- 1)):
+    for c in cut:
+        #c = cut[i]
+        if ( c != " " and isthere (c, charcount) == 1 ):
+        #if ( c != " " ):
+            index = 0
+            tsum = 0
+            cut2 = cut [i:]
+            #print cut2
+            for char in cut2:
+            #for char in cut [i:]:
+                if char==c:
+                    tsum += index
+                index += 1
+            charcount.append (c)
+            csum[c] = tsum
+            j += 1
+        i += 1
+    ## Printing the Offset
+    i = 0
+    print 'For string "%s": we take "%s" digits and we get "%s"' % (inp, first, cut)
+    
+    #for i in range (0, (len (charcount)-1)):
+    for cr in charcount:
+        print '%s = %s' % (cr, csum[cr])
+        #print '%s = %s' % (charcount [i], csum[charcount [i]])
+    #print charcount
+    #print cut
+   
+##def main():
+
+#print input1
+Calculate(input1)
+Calculate(input2)
