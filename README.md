@@ -12,6 +12,7 @@ All characters should be in lowercase, and ignore any non-lowercase characters (
 
 # Sample Output #1
 a 6
+
 b 6
 
 # Sample Input #2
@@ -19,10 +20,15 @@ b 6
 
 # Sample Output #2
 h 7
+
 e 16
+
 l 1
+
 o 0
+
 t 0
+
 r 0
 
 # Sample Input #3
