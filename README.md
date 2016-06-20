@@ -1,5 +1,5 @@
 # Offset Sum
-Problem Prompt:
+##Problem Prompt:
 
 You are given a string of letters on a first line of input.
 The first two characters are the number of letters that your program should examine (a number from 01 to 30). 
@@ -9,18 +9,18 @@ Going from left to right from the first occurence of a character, if the charact
 
 All characters should be in lowercase, and ignore any non-lowercase characters (such as digits, uppercase letters, and symbols).Include error checking for the number of characters and print ERROR if there is failure.
 
-# Sample Input #1
+### Sample Input #1
 06ababab
 
-# Sample Output #1
+### Sample Output #1
 a 6
 
 b 6
 
-# Sample Input #2
+### Sample Input #2
 12hello there world
 
-# Sample Output #2
+### Sample Output #2
 h 7
 
 e 16
@@ -33,8 +33,8 @@ t 0
 
 r 0
 
-# Sample Input #3
+### Sample Input #3
 70hello there world
 
-# Sample Output #3
+### Sample Output #3
 ERROR
