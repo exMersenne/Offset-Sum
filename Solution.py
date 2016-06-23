@@ -28,7 +28,12 @@ def Calculate(inp):
     first = int(inp[0:2])
     #print first
     second = inp[2:]
+    if (first < 1 or first >30):
+        print 'For string "%s":' % (inp)
+        print 'ERROR'
+        return
     cut = second [:first]
+    
     #cut = inp[2:(first+1)]
     #print cut 
     #for i in range(0,(len (cut)- 1)):
