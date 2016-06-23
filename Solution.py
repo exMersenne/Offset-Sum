@@ -2,6 +2,7 @@
 input1 = "06ababab"
 input2 = "12hello there world"
 input3 = "70hello there world"
+input4 = "15hello@@@@@ there world"
 
 #Here the comments represent alternative ways to solve the same problem
 
@@ -39,7 +40,7 @@ def Calculate(inp):
     #for i in range(0,(len (cut)- 1)):
     for c in cut:
         #c = cut[i]
-        if ( c != " " and isthere (c, charcount) == 0 ):
+        if ( ord(c) >= 97 and ord(c) <= 122 and isthere (c, charcount) == 0 ):
         #if ( c != " " ):
             index = 0
             tsum = 0
@@ -65,8 +66,7 @@ def Calculate(inp):
     #print charcount
     #print cut
    
-##def main():
-
 Calculate(input1)
 Calculate(input2)
 Calculate(input3)
+Calculate(input4)
